@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "simplehud",
+  "version": "${version}",
+  "name": "SimpleHud",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/simplehud/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.lukasabbe.simplehud.SimpleHudMod"
+    ]
+  },
+  "mixins": [
+    "simplehud.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

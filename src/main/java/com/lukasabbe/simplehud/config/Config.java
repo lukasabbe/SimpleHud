@@ -1,0 +1,38 @@
+package com.lukasabbe.simplehud.config;
+
+import com.lukasabbe.simplehud.Constants;
+import dev.isxander.yacl3.config.v2.api.ConfigClassHandler;
+import dev.isxander.yacl3.config.v2.api.SerialEntry;
+import dev.isxander.yacl3.config.v2.api.serializer.GsonConfigSerializerBuilder;
+import dev.isxander.yacl3.platform.YACLPlatform;
+
+import java.util.IdentityHashMap;
+import java.util.Map;
+
+public class Config {
+    public static ConfigClassHandler<Config> HANDLER = ConfigClassHandler
+            .createBuilder(Config.class)
+            .id(Constants.ConfigIdentifier)
+            .serializer(config -> GsonConfigSerializerBuilder
+                    .create(config)
+                    .setPath(YACLPlatform.getConfigDir().resolve("simple_hud_config.json5"))
+                    .build())
+            .build();
+
+    @SerialEntry
+    public Map<String, Boolean> HudActivatedList = getActiveHuds();
+
+    @SerialEntry
+    public HudPosition hudPosition = HudPosition.CENTER;
+
+    @SerialEntry
+    public boolean ignoreSafeArea = false;
+
+    private Map<String, Boolean> getActiveHuds() {
+        Map<String, Boolean> activatedHuds = new IdentityHashMap<>();
+        for(var simpleHudIdentifier : Constants.HudIdentifiers){
+            activatedHuds.put(simpleHudIdentifier.toShortString(), true);
+        }
+        return activatedHuds;
+    }
+}
