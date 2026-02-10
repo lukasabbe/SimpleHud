@@ -9,6 +9,6 @@ public enum SpeedEnum implements NameableEnum {
     ms;
     @Override
     public Component getDisplayName() {
-        return null;
+        return Component.translatable("simple_hud.config.speed_enum." + name().toLowerCase());
     }
 }

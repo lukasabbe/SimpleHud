@@ -8,6 +8,8 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.resources.Identifier;
+import net.minecraft.util.Mth;
+import net.minecraft.world.item.Item;
 
 public interface SimpleHud {
     Minecraft client = Minecraft.getInstance();
@@ -75,15 +77,41 @@ public interface SimpleHud {
         stack.popMatrix();
     }
 
+    default void drawScaledItem(GuiGraphics context, int poxX, int posY, Item item, float scaled){
+        var stack = context.pose();
+        stack.pushMatrix();
+        stack.translate(poxX,posY);
+        stack.scale(scaled,scaled);
+        stack.translate(-poxX,-posY);
+        context.renderFakeItem(item.getDefaultInstance(), poxX, posY);
+        stack.popMatrix();
+    }
+
     default int[] getCornerPos(){
         int backPlateCenteredX = 50;
         int backPlateCenteredY = 60;
 
         int screenWidth = client.getWindow().getGuiScaledWidth();
         int screenHeight = client.getWindow().getGuiScaledHeight();
-        int[] pos = calculateHudPosition(screenWidth, screenHeight, SimpleHudMod.configInstance.hudPosition);
+        int[] pos = calculateHudPosition(screenWidth, screenHeight, SimpleHudMod.configInstance.hudPositionElytra);
         int x = pos[0] - backPlateCenteredX;
         int y = pos[1] - backPlateCenteredY;
         return new int[]{x, y};
+    }
+
+    default void drawLine(GuiGraphics graphics, float posX, float posY, float endPosX, float endPosY, int points, Identifier texture){
+        for (int i = 0; i <= points; i++){
+            float progress = (float) i / points;
+            float x = Mth.lerp(progress, posX, endPosX);
+            float y = Mth.lerp(progress, posY, endPosY);
+            graphics.blit(
+                    RenderPipelines.GUI_TEXTURED,
+                    texture,
+                    (int)x, (int)y,
+                    0, 0,
+                    1, 1,
+                    1,5
+            );
+        }
     }
 }

@@ -23,10 +23,10 @@ public class Config {
     public Map<String, Boolean> HudActivatedList = getActiveHuds();
 
     @SerialEntry
-    public HudPosition hudPosition = HudPosition.CENTER;
+    public HudPosition hudPositionElytra = HudPosition.CENTER;
 
     @SerialEntry
-    public SpeedEnum speedEnum = SpeedEnum.kmh;
+    public SpeedEnum speedEnumElytra = SpeedEnum.kmh;
 
     @SerialEntry
     public boolean ignoreSafeArea = false;

@@ -12,6 +12,9 @@
   "entrypoints": {
     "client": [
       "com.lukasabbe.simplehud.SimpleHudMod"
+    ],
+    "modmenu": [
+      "com.lukasabbe.simplehud.config.ModMenu"
     ]
   },
   "mixins": [
