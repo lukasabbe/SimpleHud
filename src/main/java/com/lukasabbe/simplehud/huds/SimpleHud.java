@@ -2,7 +2,9 @@ package com.lukasabbe.simplehud.huds;
 
 import com.lukasabbe.simplehud.Constants;
 import com.lukasabbe.simplehud.SimpleHudMod;
+import com.lukasabbe.simplehud.config.Config;
 import com.lukasabbe.simplehud.config.HudPosition;
+import com.lukasabbe.simplehud.tools.ElytraTools;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
@@ -20,7 +22,7 @@ public interface SimpleHud {
     Identifier getIdentifier();
 
     default boolean isHudActivated(){
-        return SimpleHudMod.configInstance.HudActivatedList.get(getIdentifier().toShortString());
+        return  Config.HANDLER.instance().HudActivatedList.get(getIdentifier().toShortString());
     }
 
     default void renderBackPlate(GuiGraphics graphics){
@@ -49,7 +51,7 @@ public interface SimpleHud {
         final int hudHalfWidth = 50;
         final int hudHeight = 36;
 
-        if(SimpleHudMod.configInstance.ignoreSafeArea){
+        if( Config.HANDLER.instance().ignoreSafeArea){
             return switch (position){
                 case TOP_LEFT -> new int[]{hudHalfWidth + padding, 60 + padding};
                 case TOP_RIGHT -> new int[]{screenWidth - hudHalfWidth - padding, 60 + padding};
@@ -93,7 +95,7 @@ public interface SimpleHud {
 
         int screenWidth = client.getWindow().getGuiScaledWidth();
         int screenHeight = client.getWindow().getGuiScaledHeight();
-        int[] pos = calculateHudPosition(screenWidth, screenHeight, SimpleHudMod.configInstance.hudPositionElytra);
+        int[] pos = calculateHudPosition(screenWidth, screenHeight, Config.HANDLER.instance().hudPositionElytra);
         int x = pos[0] - backPlateCenteredX;
         int y = pos[1] - backPlateCenteredY;
         return new int[]{x, y};
@@ -113,5 +115,13 @@ public interface SimpleHud {
                     1,5
             );
         }
+    }
+
+    default String getSpeed(){
+        return switch (Config.HANDLER.instance().speedEnumElytra){
+            case kmh -> String.format("%.1f km/h", ElytraTools.getSpeedKmh());
+            case mph -> String.format("%.1f mph", ElytraTools.getSpeedMph());
+            case ms -> String.format("%.1f m/s", ElytraTools.getSpeedMs());
+        };
     }
 }

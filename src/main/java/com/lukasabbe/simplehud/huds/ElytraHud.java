@@ -2,6 +2,7 @@ package com.lukasabbe.simplehud.huds;
 
 import com.lukasabbe.simplehud.Constants;
 import com.lukasabbe.simplehud.SimpleHudMod;
+import com.lukasabbe.simplehud.config.Config;
 import com.lukasabbe.simplehud.tools.ElytraTools;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.gui.GuiGraphics;
@@ -23,7 +24,7 @@ public class ElytraHud implements SimpleHud {
     @Override
     public void render(GuiGraphics graphics, DeltaTracker tracker) {
         if(!isHudActivated()) return;
-        //if(!ElytraTools.isFlying()) return;
+        if(!ElytraTools.isFlying()) return;
         if(client.noRender) return;
         if(client.player == null) return;
 
@@ -148,14 +149,6 @@ public class ElytraHud implements SimpleHud {
         float endY = Math.round(centerY + (radius * Mth.cos(radians)));
 
         drawLine(graphics, centerX, centerY, endX, endY, (int) radius, compass_pointer);
-    }
-
-    private String getSpeed(){
-        return switch (SimpleHudMod.configInstance.speedEnumElytra){
-            case kmh -> String.format("%.1f km/h", ElytraTools.getSpeedKmh());
-            case mph -> String.format("%.1f mph", ElytraTools.getSpeedMph());
-            case ms -> String.format("%.1f m/s", ElytraTools.getSpeedMs());
-        };
     }
 
     @Override
