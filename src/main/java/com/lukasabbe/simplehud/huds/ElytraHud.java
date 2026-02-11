@@ -1,8 +1,6 @@
 package com.lukasabbe.simplehud.huds;
 
 import com.lukasabbe.simplehud.Constants;
-import com.lukasabbe.simplehud.SimpleHudMod;
-import com.lukasabbe.simplehud.config.Config;
 import com.lukasabbe.simplehud.tools.ElytraTools;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.gui.GuiGraphics;
