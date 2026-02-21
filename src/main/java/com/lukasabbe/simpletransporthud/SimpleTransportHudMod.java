@@ -1,12 +1,12 @@
-package com.lukasabbe.simplehud;
+package com.lukasabbe.simpletransporthud;
 
-import com.lukasabbe.simplehud.config.Config;
-import com.lukasabbe.simplehud.huds.BoatHud;
-import com.lukasabbe.simplehud.huds.ElytraHud;
-import com.lukasabbe.simplehud.huds.MinecartHud;
-import com.lukasabbe.simplehud.huds.SimpleHud;
-import com.lukasabbe.simplehud.tools.ElytraTools;
-import com.lukasabbe.simplehud.tools.EntityTools;
+import com.lukasabbe.simpletransporthud.config.Config;
+import com.lukasabbe.simpletransporthud.huds.BoatHud;
+import com.lukasabbe.simpletransporthud.huds.ElytraHud;
+import com.lukasabbe.simpletransporthud.huds.MinecartHud;
+import com.lukasabbe.simpletransporthud.huds.SimpleHud;
+import com.lukasabbe.simpletransporthud.tools.ElytraTools;
+import com.lukasabbe.simpletransporthud.tools.EntityTools;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.rendering.v1.hud.HudElementRegistry;
@@ -16,7 +16,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import java.util.Arrays;
 import java.util.List;
 
-public class SimpleHudMod implements ClientModInitializer {
+public class SimpleTransportHudMod implements ClientModInitializer {
 
     public static List<SimpleHud> HUD_LIST = Arrays.asList(
             new ElytraHud(),

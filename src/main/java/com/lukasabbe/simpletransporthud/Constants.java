@@ -1,4 +1,4 @@
-package com.lukasabbe.simplehud;
+package com.lukasabbe.simpletransporthud;
 
 import net.minecraft.resources.Identifier;
 
@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Constants {
-    public final static String MOD_ID = "simplehud";
+    public final static String MOD_ID = "simpletransporthud";
     //Config
     public final static Identifier ConfigIdentifier = Identifier.fromNamespaceAndPath(MOD_ID, "config");
     //Hud:s

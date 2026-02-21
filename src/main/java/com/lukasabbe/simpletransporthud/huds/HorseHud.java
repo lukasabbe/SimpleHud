@@ -1,9 +1,9 @@
-package com.lukasabbe.simplehud.huds;
+package com.lukasabbe.simpletransporthud.huds;
 
-import com.lukasabbe.simplehud.config.HudPosition;
+import com.lukasabbe.simpletransporthud.config.HudPosition;
 import net.minecraft.resources.Identifier;
 
-public class NautilusHud extends RideableHud {
+public class HorseHud extends RideableHud {
     @Override
     public Identifier getIdentifier() {
         return null;

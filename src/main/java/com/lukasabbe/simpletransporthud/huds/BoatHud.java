@@ -1,10 +1,9 @@
-package com.lukasabbe.simplehud.huds;
+package com.lukasabbe.simpletransporthud.huds;
 
-import com.lukasabbe.simplehud.Constants;
-import com.lukasabbe.simplehud.config.Config;
-import com.lukasabbe.simplehud.config.HudPosition;
-import com.lukasabbe.simplehud.tools.ElytraTools;
-import com.lukasabbe.simplehud.tools.EntityTools;
+import com.lukasabbe.simpletransporthud.Constants;
+import com.lukasabbe.simpletransporthud.config.Config;
+import com.lukasabbe.simpletransporthud.config.HudPosition;
+import com.lukasabbe.simpletransporthud.tools.EntityTools;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.RenderPipelines;

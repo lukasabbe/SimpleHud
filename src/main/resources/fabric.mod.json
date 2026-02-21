@@ -1,24 +1,24 @@
 {
   "schemaVersion": 1,
-  "id": "simplehud",
+  "id": "simpletransporthud",
   "version": "${version}",
-  "name": "SimpleHud",
+  "name": "Simple Transport HUD",
   "description": "",
   "authors": [],
   "contact": {},
   "license": "MIT",
-  "icon": "assets/simplehud/icon.png",
+  "icon": "assets/simpletransporthud/icon.png",
   "environment": "*",
   "entrypoints": {
     "client": [
-      "com.lukasabbe.simplehud.SimpleHudMod"
+      "com.lukasabbe.simpletransporthud.SimpleTransportHudMod"
     ],
     "modmenu": [
-      "com.lukasabbe.simplehud.config.ModMenu"
+      "com.lukasabbe.simpletransporthud.config.ModMenu"
     ]
   },
   "mixins": [
-    "simplehud.mixins.json"
+    "simpletransporthud.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",

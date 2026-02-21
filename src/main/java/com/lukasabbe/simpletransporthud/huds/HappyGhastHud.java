@@ -1,9 +1,9 @@
-package com.lukasabbe.simplehud.huds;
+package com.lukasabbe.simpletransporthud.huds;
 
-import com.lukasabbe.simplehud.config.HudPosition;
+import com.lukasabbe.simpletransporthud.config.HudPosition;
 import net.minecraft.resources.Identifier;
 
-public class StriderHud extends RideableHud{
+public class HappyGhastHud extends RideableHud{
     @Override
     public Identifier getIdentifier() {
         return null;

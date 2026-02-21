@@ -1,4 +1,4 @@
-package com.lukasabbe.simplehud.tools;
+package com.lukasabbe.simpletransporthud.tools;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;

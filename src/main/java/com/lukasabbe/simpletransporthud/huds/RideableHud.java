@@ -1,4 +1,4 @@
-package com.lukasabbe.simplehud.huds;
+package com.lukasabbe.simpletransporthud.huds;
 
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.gui.GuiGraphics;

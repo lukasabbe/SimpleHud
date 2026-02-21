@@ -1,6 +1,6 @@
-package com.lukasabbe.simplehud.config;
+package com.lukasabbe.simpletransporthud.config;
 
-import com.lukasabbe.simplehud.Constants;
+import com.lukasabbe.simpletransporthud.Constants;
 import dev.isxander.yacl3.config.v2.api.ConfigClassHandler;
 import dev.isxander.yacl3.config.v2.api.SerialEntry;
 import dev.isxander.yacl3.config.v2.api.serializer.GsonConfigSerializerBuilder;
@@ -15,7 +15,7 @@ public class Config {
             .id(Constants.ConfigIdentifier)
             .serializer(config -> GsonConfigSerializerBuilder
                     .create(config)
-                    .setPath(YACLPlatform.getConfigDir().resolve("simple_hud_config.json5"))
+                    .setPath(YACLPlatform.getConfigDir().resolve("simple_transport_hud_config.json5"))
                     .build())
             .build();
 
