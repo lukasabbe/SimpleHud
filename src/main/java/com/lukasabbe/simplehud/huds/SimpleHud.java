@@ -31,6 +31,7 @@ public interface SimpleHud {
     void render(GuiGraphics graphics, DeltaTracker tracker);
 
     Identifier getIdentifier();
+    HudPosition getHudPosition();
 
     default boolean isHudActivated(){
         return  Config.HANDLER.instance().HudActivatedList.get(getIdentifier().toShortString());
@@ -106,7 +107,7 @@ public interface SimpleHud {
 
         int screenWidth = client.getWindow().getGuiScaledWidth();
         int screenHeight = client.getWindow().getGuiScaledHeight();
-        int[] pos = calculateHudPosition(screenWidth, screenHeight, Config.HANDLER.instance().hudPositionElytra);
+        int[] pos = calculateHudPosition(screenWidth, screenHeight, getHudPosition());
         int x = pos[0] - backPlateCenteredX;
         int y = pos[1] - backPlateCenteredY;
         return new int[]{x, y};

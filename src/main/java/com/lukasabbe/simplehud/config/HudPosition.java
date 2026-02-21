@@ -12,6 +12,6 @@ public enum HudPosition implements NameableEnum {
 
     @Override
     public Component getDisplayName() {
-        return null;
+        return Component.translatable("simple_hud.config.position." + name().toLowerCase());
     }
 }

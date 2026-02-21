@@ -12,11 +12,20 @@
   "simple_hud.config.speed_enum.kmh": "km/h",
   "simple_hud.config.speed_enum.mph": "MPH",
   "simple_hud.config.speed_enum.ms": "m/s",
+  "simple_hud.config.position.center": "Center",
+  "simple_hud.config.position.top_left": "Top Left",
+  "simple_hud.config.position.top_right": "Top Right",
+  "simple_hud.config.position.bottom_left": "Bottom Left",
+  "simple_hud.config.position.bottom_right": "Bottom Right",
   "simple_hud.config.category.boat_hud.name": "Boat HUD options",
   "simple_hud.config.category.general.group.activated_huds.option.boat_hud.name": "Boat HUD",
   "simple_hud.config.category.general.group.activated_huds.option.boat_hud.description": "Boat Hud toggle",
   "simple_hud.config.category.general.option.scale.description": "Change the scale of the HUD",
   "simple_hud.config.category.general.option.scale.name": "Scale",
   "simple_hud.config.category.general.group.activated_huds.option.minecart_hud.name": "Minecart HUD",
-  "simple_hud.config.category.general.group.activated_huds.option.minecart_hud.description": "Minecart Hud toggle"
+  "simple_hud.config.category.general.group.activated_huds.option.minecart_hud.description": "Minecart Hud toggle",
+  "simple_hud.config.category.general.option.safe_area.name": "Ignore Safe Area",
+  "simple_hud.config.category.general.option.safe_area.description": "Move HUD to screen edges, ignoring GUI safe area margins",
+  "simple_hud.config.category.elytra_options.option.hud_position.name": "HUD Position",
+  "simple_hud.config.category.elytra_options.option.hud_position.description": "Change the position of the HUD on screen"
 }

@@ -2,6 +2,7 @@ package com.lukasabbe.simplehud.huds;
 
 import com.lukasabbe.simplehud.Constants;
 import com.lukasabbe.simplehud.config.Config;
+import com.lukasabbe.simplehud.config.HudPosition;
 import com.lukasabbe.simplehud.tools.EntityTools;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.gui.GuiGraphics;
@@ -133,5 +134,10 @@ public class MinecartHud implements SimpleHud {
     @Override
     public Identifier getIdentifier() {
         return Constants.MinecartHudIdentifier;
+    }
+
+    @Override
+    public HudPosition getHudPosition() {
+        return Config.HANDLER.instance().hudPositionMinecart;
     }
 }
