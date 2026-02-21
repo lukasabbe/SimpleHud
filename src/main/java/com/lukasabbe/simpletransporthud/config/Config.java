@@ -39,6 +39,12 @@ public class Config {
     public HudPosition hudPositionMinecart = HudPosition.CENTER;
     @SerialEntry
     public HudPosition hudPositionHorse = HudPosition.CENTER;
+    @SerialEntry
+    public HudPosition hudPositionHappyGhast = HudPosition.CENTER;
+    @SerialEntry
+    public HudPosition hudPositionNautilus = HudPosition.CENTER;
+    @SerialEntry
+    public HudPosition hudPositionStrider = HudPosition.CENTER;
 
 
     //Hud speed unit
@@ -50,6 +56,13 @@ public class Config {
     public SpeedEnum speedEnumMinecart = SpeedEnum.kmh;
     @SerialEntry
     public SpeedEnum speedEnumHorse = SpeedEnum.kmh;
+    @SerialEntry
+    public SpeedEnum speedEnumHappyGhast = SpeedEnum.kmh;
+    @SerialEntry
+    public SpeedEnum speedEnumNautilus = SpeedEnum.kmh;
+    @SerialEntry
+    public SpeedEnum speedEnumStrider = SpeedEnum.kmh;
+
 
     //Display speed
     @SerialEntry
@@ -60,6 +73,12 @@ public class Config {
     public int minecartHudDelay = 0;
     @SerialEntry
     public int horseHudDelay = 0;
+    @SerialEntry
+    public int happyGhastHudDelay = 0;
+    @SerialEntry
+    public int nautilusHudDelay = 0;
+    @SerialEntry
+    public int striderHudDelay = 0;
 
     private Map<String, Boolean> getActiveHuds() {
         Map<String, Boolean> activatedHuds = new IdentityHashMap<>();

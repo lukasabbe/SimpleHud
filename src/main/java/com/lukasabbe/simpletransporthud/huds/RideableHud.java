@@ -1,6 +1,6 @@
 package com.lukasabbe.simpletransporthud.huds;
 
-import com.lukasabbe.simpletransporthud.config.Config;
+import com.lukasabbe.simpletransporthud.config.SpeedEnum;
 import com.lukasabbe.simpletransporthud.tools.EntityTools;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.gui.GuiGraphics;
@@ -13,7 +13,7 @@ public abstract class RideableHud implements SimpleHud {
         if(!isHudActivated()) return;
         if(client.noRender) return;
         if(client.player == null) return;
-        if(EntityTools.getTime() < Config.HANDLER.instance().boatHudDelay) return;
+        if(EntityTools.getTime() < getDelay()) return;
         int[] pos = getCornerPos();
         int x = pos[0];
         int y = pos[1];
@@ -26,7 +26,7 @@ public abstract class RideableHud implements SimpleHud {
 
         //Draw speed
         int speedTextY = 5;
-        renderCenteredScaledText(graphics, getSpeed(Config.HANDLER.instance().speedEnumBoat), x + textX, y + speedTextY, whiteColor, textScale);
+        renderCenteredScaledText(graphics, getSpeed(getSpeedEnum()), x + textX, y + speedTextY, whiteColor, textScale);
 
         //Draw coordinates
         int coordinatesTextY = 15;
@@ -185,4 +185,7 @@ public abstract class RideableHud implements SimpleHud {
 
         drawLine(graphics, centerX, centerY, endX, endY, (int) radius, compass_pointer);
     }
+
+    public abstract SpeedEnum getSpeedEnum();
+    public abstract int getDelay();
 }

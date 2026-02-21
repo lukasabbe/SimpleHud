@@ -19,7 +19,10 @@ public class SimpleTransportHudMod implements ClientModInitializer {
             new ElytraHud(),
             new BoatHud(),
             new MinecartHud(),
-            new HorseHud()
+            new HorseHud(),
+            new HappyGhastHud(),
+            new NautilusHud(),
+            new StriderHud()
     );
 
     @Override

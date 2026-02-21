@@ -13,8 +13,12 @@ Transports included:
 
 Examples:
 - Elytra ![Elytra example](./images/ElytraExample.png)
-- Boat ![Elytra example](./images/BoatExample.png)
-- Minecart ![Elytra example](./images/MinecartExample.png)
+- Boat ![Boat example](./images/BoatExample.png)
+- Minecart ![Minecart example](./images/MinecartExample.png)
+- Horse ![Horse example](./images/HorseExample.png)
+- Happy Ghast ![Happy Ghast example](./images/HappyGhastExample.png)
+- Nautilus ![Nautilus Example](./images/NautilusExample.png)
+- Strider ![Strider Example](./images/StriderExample.png)
 
 # Looking for a server?
 Get BisectHosting and save 25% off for new customers using code Lukas at checkout.

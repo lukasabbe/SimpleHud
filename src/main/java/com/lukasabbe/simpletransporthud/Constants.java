@@ -14,6 +14,9 @@ public class Constants {
     public final static Identifier BoatHudIdentifier = Identifier.fromNamespaceAndPath(MOD_ID, "boat_hud");
     public final static Identifier MinecartHudIdentifier = Identifier.fromNamespaceAndPath(MOD_ID, "minecart_hud");
     public final static Identifier HorseHudIdentifier = Identifier.fromNamespaceAndPath(MOD_ID, "horse_hud");
+    public final static Identifier HappyGhastIdentifier = Identifier.fromNamespaceAndPath(MOD_ID, "happy_ghast_hud");
+    public final static Identifier NautilusHudIdentifier = Identifier.fromNamespaceAndPath(MOD_ID, "nautilus_hud");
+    public final static Identifier StriderHudIdentifier = Identifier.fromNamespaceAndPath(MOD_ID, "strider_hud");
 
-    public final static List<Identifier> HudIdentifiers = Arrays.asList(ElytraHudIdentifier, BoatHudIdentifier, MinecartHudIdentifier, HorseHudIdentifier);
+    public final static List<Identifier> HudIdentifiers = Arrays.asList(ElytraHudIdentifier, BoatHudIdentifier, MinecartHudIdentifier, HorseHudIdentifier, HappyGhastIdentifier, NautilusHudIdentifier, StriderHudIdentifier);
 }

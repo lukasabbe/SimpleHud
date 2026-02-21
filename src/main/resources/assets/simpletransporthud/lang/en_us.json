@@ -24,11 +24,22 @@
   "simple_transport_hud.config.category.general.option.scale.name": "Scale",
   "simple_transport_hud.config.category.general.group.activated_huds.option.minecart_hud.name": "Minecart HUD",
   "simple_transport_hud.config.category.general.group.activated_huds.option.minecart_hud.description": "Minecart Hud toggle",
+  "simple_transport_hud.config.category.general.group.activated_huds.option.horse_hud.name": "Horse/Donky HUD",
+  "simple_transport_hud.config.category.general.group.activated_huds.option.horse_hud.description": "Horse/Donky Hud toggle",
+  "simple_transport_hud.config.category.general.group.activated_huds.option.happy_ghast_hud.name": "Happy Ghast HUD",
+  "simple_transport_hud.config.category.general.group.activated_huds.option.happy_ghast_hud.description": "Happy Ghast Hud toggle",
+  "simple_transport_hud.config.category.general.group.activated_huds.option.nautilus_hud.name": "Nautilus HUD",
+  "simple_transport_hud.config.category.general.group.activated_huds.option.nautilus_hud.description": "Nautilus Hud toggle",
+  "simple_transport_hud.config.category.general.group.activated_huds.option.strider_hud.name": "Strider HUD",
+  "simple_transport_hud.config.category.general.group.activated_huds.option.strider_hud.description": "Strider Hud toggle",
   "simple_transport_hud.config.category.general.option.safe_area.name": "Ignore Safe Area",
   "simple_transport_hud.config.category.general.option.safe_area.description": "Move HUD to screen edges, ignoring GUI safe area margins",
   "simple_transport_hud.config.category.elytra_options.option.hud_position.name": "HUD Position",
   "simple_transport_hud.config.category.elytra_options.option.hud_position.description": "Change the position of the HUD on screen",
   "simple_transport_hud.config.category.elytra_options.option.delay_hud.name": "Delay HUD displaying",
   "simple_transport_hud.config.category.elytra_options.option.delay_hud.description": "Change the time it takes for the HUD to appear",
-  "simple_transport_hud.config.category.minecart_hud.name": "Minecart HUD options"
+  "simple_transport_hud.config.category.minecart_hud.name": "Minecart HUD options",
+  "simple_transport_hud.config.category.horse_hud.name": "Horse HUD options",
+  "simple_transport_hud.config.category.happy_ghast_hud.name": "Happy Ghast HUD opptions",
+  "simple_transport_hud.config.category.strider.name": "Strider HUD options"
 }
