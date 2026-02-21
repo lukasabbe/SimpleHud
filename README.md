@@ -9,7 +9,10 @@ Transports included:
 - Elytra
 - Minecarts
 - Boats
-- More coming
+- Horse
+- Happy Ghast
+- Nautilus
+- Strider
 
 Examples:
 - Elytra ![Elytra example](./images/ElytraExample.png)
